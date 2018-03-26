@@ -10,5 +10,6 @@ _1. Websites_ : Title, Website Link, Like/Dislikes
 _2. Comment_: Username, Text, Date
 
 # Wireframe
-![wireframe](start.jpg)
 
+![wireframe](start.jpg)
+![wireframe](main.jpg)
