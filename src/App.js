@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Nav from './Nav/Nav'
-import logo from './logo.svg'
+import MainPage from './MainPage/MainPage'
 import './App.css'
 
 class App extends Component {
@@ -8,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
+        <MainPage />
       </div>
     )
   }
