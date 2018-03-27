@@ -6,7 +6,7 @@ class MainPage extends Component {
     return (
       <div>
         <Iframe
-          url="https://www.youtube.com/embed/K5xERXE7pxI"
+          url={this.props.link}
           width="100%"
           height="100vh"
           display="initial"
