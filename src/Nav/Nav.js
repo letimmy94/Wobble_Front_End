@@ -7,6 +7,8 @@ class Nav extends Component {
         <button className="red">Red</button>
         <button className="grey">Grey</button>
         <button className="green">Green</button>
+        <div className="link">Link</div>
+        <button>Comments</button>
       </nav>
     )
   }
