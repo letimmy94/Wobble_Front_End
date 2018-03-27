@@ -1,17 +1,24 @@
 import React, { Component } from 'react'
 import './HomePage.css'
+import '../App.css'
 
 class HomePage extends Component {
 	render() {
 		return (
-			<div class="title">
-				<h1>Wobble</h1>
-				<ul>
-					<button class="startButton">Start</button>
-				</ul>
-				<ul>
-					<button class="addButton">Add</button>
-				</ul>
+			<div className="HomePage">
+				<div className="content">
+					<h1 className="title">WOBBLE!</h1>
+					<p>
+						Wobble is helps you exploring new exciting pages through random
+						generating websites.
+					</p>
+					<div className="btnWrapper">
+						<button className="btn">Start</button>
+						<button type="submit" className="btn">
+							Submit
+						</button>
+					</div>
+				</div>
 			</div>
 		)
 	}
