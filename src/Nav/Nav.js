@@ -16,11 +16,11 @@ const Nav = () => {
         </button>
         <button className="grey left-btns" id="left-btn-container">
           <span className="left-btn-text">
-            <img
+            {/* <img
               className="left-btn-img"
               src={require('./thumbsup.png')}
               alt="LIK"
-            />
+            /> */}
           </span>
         </button>
         <button className="green left-btns" id="left-btn-container">
