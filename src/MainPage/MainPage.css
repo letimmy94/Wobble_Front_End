@@ -1,0 +1,22 @@
+.wobble-page:hover #main {
+  transform-origin: 50% 50%;
+  animation: 0.6s main 1;
+}
+
+@keyframes main {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+  75% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
