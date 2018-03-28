@@ -27,7 +27,7 @@ class Nav extends Component {
             <button className="grey left-btns" id="left-btn-container">
               <span className="left-btn-text">
                 <img
-                  className="left-btn-img"
+                  className="left-btn-hamburger"
                   src={require('./hamburger.png')}
                   alt="LIK"
                 />

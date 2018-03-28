@@ -33,6 +33,11 @@ nav {
   top: 0;
   color: white;
 }
+.left-btn-hamburger {
+  height: 40px;
+  margin-left: -8px;
+  margin-top: -1px;
+}
 .left-btn-img {
   z-index: 1;
   margin-top: 5px;
@@ -41,7 +46,7 @@ nav {
 .left-btn-img-down {
   z-index: 1;
   margin-top: 8px;
-  height: 22px;
+  height: 25px;
 }
 #left-btn-container:hover .left-btn-text {
   display: block;
