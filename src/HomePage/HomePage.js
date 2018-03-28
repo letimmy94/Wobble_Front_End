@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import './HomePage.css'
+import './Homepage.css'
 import '../App.css'
+import { Router, Route, Link } from 'react-router-dom'
 
 class HomePage extends Component {
   render() {
