@@ -55,7 +55,7 @@ class Nav extends Component {
               className="wobble-btn"
               onClick={link => {
                 this.props.handleWobble(this.props.link)
-                this.setState({ randomLink: this.props.link[0] })
+                this.setState({ randomLink: this.props.link[0].website })
                 console.log(this.state.randomLink)
               }}
             >
