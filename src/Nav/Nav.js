@@ -12,6 +12,7 @@ class Nav extends Component {
   }
 
   render() {
+    console.log(this.state.randomLink)
     return (
       <div>
         <nav>
@@ -39,7 +40,8 @@ class Nav extends Component {
             <input
               className="link link-div"
               id="foo"
-              value={this.state.randomLink}
+              value={this.state.randomLink.website}
+              placeholder="Click on Wobble to Wobble ^.^ ->"
             />
           </div>
           <div>
@@ -47,8 +49,8 @@ class Nav extends Component {
               className="wobble-btn"
               onClick={link => {
                 this.props.handleWobble(this.props.link)
-                this.setState({ randomLink: this.props.link[0].website })
-                console.log(this.state.randomLink)
+                this.setState({ randomLink: this.props.link[0] })
+                console.log(this.props.link[0])
               }}
             >
               <div id="main">WOBBLE</div>
@@ -57,7 +59,7 @@ class Nav extends Component {
             <button className="comment-btn">Comments</button>
           </div>
         </nav>
-        <MainPage link={this.state.randomLink} />
+        <MainPage link={this.state.randomLink.website} />
       </div>
     )
   }

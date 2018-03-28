@@ -37,7 +37,7 @@ class App extends Component {
   componentDidMount() {
     axios.get('http://localhost:3001/api/websites').then(website => {
       // this.handleWobble(website.data)
-      console.log(website.data[0].website)
+      // console.log(website.data[0].website)
       for (var i = 0; i < website.data.length; i++) {
         this.setState({ links: [...this.state.links, website.data[i]] })
       }
@@ -60,7 +60,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.links)
+    // console.log(this.state.links)
     return (
       <div className="App">
         <Nav link={this.state.links} handleWobble={this.handleWobble} />
