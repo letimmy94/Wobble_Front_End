@@ -16,11 +16,6 @@ class AddLink extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-
-    // let addedLink = {
-    //   title,
-    //   link
-    // }
     this.setState(
       {
         title: this.refs.title.value,
@@ -28,9 +23,6 @@ class AddLink extends Component {
       },
       this.handlePost
     )
-    // let newLink = this.state.newLink
-    // newLink.push(addedLink)
-    // this.setState({ newLink: newLink })
   }
 
   handlePost() {
