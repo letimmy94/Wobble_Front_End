@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './Nav.css'
 import MainPage from '../MainPage/MainPage'
 import Button from './Button/Button'
+import AddLink from '../AddLink/AddLink'
+import { Router, Route, Link } from 'react-router-dom'
 
 class Nav extends Component {
   constructor() {
@@ -10,6 +12,8 @@ class Nav extends Component {
       randomLink: ''
     }
   }
+
+  onClick
 
   render() {
     return (
@@ -35,29 +39,34 @@ class Nav extends Component {
               alt={'DISLIKE'}
             />
           </div>
+
           <div>
-            <input
-              className="link link-div"
-              id="foo"
-              value={this.state.randomLink}
-            />
+            <Link to="/add">
+              <button className="comment-btn">+</button>
+            </Link>
+            <input className="link link-div" value={this.state.randomLink} />
           </div>
           <div>
-            <button
-              className="wobble-btn"
-              onClick={link => {
-                this.props.handleWobble(this.props.link)
-                this.setState({ randomLink: this.props.link[0].website })
-                console.log(this.state.randomLink)
-              }}
-            >
-              <div id="main">WOBBLE</div>
-            </button>
-
+            <Link to="/wobble">
+              <button
+                className="wobble-btn"
+                onClick={link => {
+                  this.props.handleWobble(this.props.link)
+                  this.setState({ randomLink: this.props.link[0].website })
+                  console.log(this.state.randomLink)
+                }}
+              >
+                <div id="main">WOBBLE</div>
+              </button>
+            </Link>
             <button className="comment-btn">Comments</button>
           </div>
         </nav>
-        <MainPage link={this.state.randomLink} />
+        <Route path="/add" render={() => <AddLink />} />
+        <Route
+          path="/wobble"
+          render={() => <MainPage link={this.state.randomLink} />}
+        />
       </div>
     )
   }
