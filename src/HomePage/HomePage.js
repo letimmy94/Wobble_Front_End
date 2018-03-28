@@ -4,17 +4,18 @@ import '../App.css'
 
 class HomePage extends Component {
 	render() {
+		const image =
+			'https://i.imgur.com/5NZRISg_d.jpg?maxwidth=1040&fidelity=high'
 		return (
-			<div className="HomePage">
+			<div className="HomePage" style={{ backgroundImage: `url('${image}')` }}>
 				<div className="content">
 					<h1 className="title">WOBBLE!</h1>
 					<p>
-						Wobble is helps you exploring new exciting pages through random
+						Wobble helps you exploring new exciting pages through random
 						generating websites.
 					</p>
 					<div className="btnWrapper">
 						<button className="btn btn-large">Start</button>
-						<p>or</p>
 						<button type="submit" className="btn btn-small">
 							Submit#
 						</button>

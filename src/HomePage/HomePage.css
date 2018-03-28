@@ -2,6 +2,9 @@
 	color: white;
 	text-align: center;
 	background-color: blue;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -12,7 +15,7 @@
 .content {
 	margin: auto;
 	max-width: 800px;
-	font-size: 30px;
+	font-size: 25px;
 }
 
 .title {
@@ -20,7 +23,10 @@
 	margin-bottom: 20px;
 	font-weight: bold;
 	color: #fff;
-	font-size: 120px;
+	font-size: 90px;
+	font-style: italic;
+	font-family: 'Fascinate Inline', cursive;
+	text-shadow: 1px 1px 2px #000000;
 }
 
 .btn {
@@ -28,20 +34,23 @@
 	display: inline-block;
 	background: white;
 	border-radius: 5px;
-	padding: 5px 10px;
+	padding: 10px 8px;
 	font-weight: bold;
 	color: #000;
+	font-family: 'arial';
+	font-style: italic;
+	font-size: 10px;
 }
 
 .btn-large {
-	font-size: 60px;
-	padding: 20px 40px;
+	font-size: 48px;
+	padding: 15px 20px;
 }
 .btn-small {
 	font-size: 28px;
 }
 .btnWrapper {
 	width: 100%;
-	max-width: 300px;
+	max-width: 250px;
 	margin: 0 auto;
 }
