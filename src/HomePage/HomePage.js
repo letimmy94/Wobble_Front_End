@@ -13,9 +13,10 @@ class HomePage extends Component {
 						generating websites.
 					</p>
 					<div className="btnWrapper">
-						<button className="btn">Start</button>
-						<button type="submit" className="btn">
-							Submit
+						<button className="btn btn-large">Start</button>
+						<p>or</p>
+						<button type="submit" className="btn btn-small">
+							Submit#
 						</button>
 					</div>
 				</div>

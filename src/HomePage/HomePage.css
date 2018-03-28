@@ -8,18 +8,40 @@
 	justify-content: center;
 	flex-direction: column;
 }
+
 .content {
 	margin: auto;
 	max-width: 800px;
+	font-size: 30px;
 }
 
 .title {
 	margin-top: 0;
+	margin-bottom: 20px;
+	font-weight: bold;
+	color: #fff;
+	font-size: 120px;
 }
+
 .btn {
 	border: 1px solid black;
 	display: inline-block;
 	background: white;
 	border-radius: 5px;
 	padding: 5px 10px;
+	font-weight: bold;
+	color: #000;
+}
+
+.btn-large {
+	font-size: 60px;
+	padding: 20px 40px;
+}
+.btn-small {
+	font-size: 28px;
+}
+.btnWrapper {
+	width: 100%;
+	max-width: 300px;
+	margin: 0 auto;
 }
