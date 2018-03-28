@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Nav from './Nav/Nav'
+import AddLink from './AddLink/AddLink'
 // import MainPage from './MainPage/MainPage'
 import axios from 'axios'
 import './App.css'
@@ -60,7 +61,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.links)
+    // console.log(this.state.links)
     return (
       <div className="App">
         <Nav link={this.state.links} handleWobble={this.handleWobble} />
