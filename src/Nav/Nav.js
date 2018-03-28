@@ -38,7 +38,7 @@ class Nav extends Component {
           <div>
             <input
               className="link link-div"
-              id="foo"
+              type="text"
               value={this.state.randomLink}
             />
           </div>
