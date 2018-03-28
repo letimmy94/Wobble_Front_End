@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Nav.css'
 import MainPage from '../MainPage/MainPage'
+import Button from './Buttons/Buttons'
 
 class Nav extends Component {
   constructor() {
@@ -15,33 +16,24 @@ class Nav extends Component {
       <div>
         <nav>
           <div>
-            <button className="red left-btns" id="left-btn-container">
-              <span className="left-btn-text">
-                <img
-                  className="left-btn-img"
-                  src={require('./thumbsup.png')}
-                  alt="LIK"
-                />
-              </span>
-            </button>
-            <button className="grey left-btns" id="left-btn-container">
-              <span className="left-btn-text">
-                <img
-                  className="left-btn-hamburger"
-                  src={require('./hamburger.png')}
-                  alt="LIK"
-                />
-              </span>
-            </button>
-            <button className="green left-btns" id="left-btn-container">
-              <span className="left-btn-text">
-                <img
-                  className="left-btn-img-down"
-                  src={require('./thumbsdown.png')}
-                  alt="LIK"
-                />
-              </span>
-            </button>
+            <Button
+              btnClassName={'red left-btns'}
+              imgClassName={'left-btn-img'}
+              src={require('../Nav/thumbsup.png')}
+              alt={'LIKE'}
+            />
+            <Button
+              btnClassName={'grey left-btns'}
+              imgClassName={'left-btn-hamburger'}
+              src={require('../Nav/hamburger.png')}
+              alt={'MENU'}
+            />
+            <Button
+              btnClassName={'green left-btns'}
+              imgClassName={'left-btn-img'}
+              src={require('../Nav/thumbsdown.png')}
+              alt={'DISLIKE'}
+            />
           </div>
           <div>
             <input
