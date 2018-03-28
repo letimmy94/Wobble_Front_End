@@ -9,15 +9,15 @@ class Nav extends Component {
   constructor() {
     super()
     this.state = {
+      randomLinkTitle: '',
       randomLink: ''
     }
   }
 
-  onClick
-
   render() {
     return (
       <div>
+        <h1>{this.state.randomLinkTitle}</h1>
         <nav>
           <div>
             <Button
@@ -52,8 +52,9 @@ class Nav extends Component {
                 className="wobble-btn"
                 onClick={link => {
                   this.props.handleWobble(this.props.link)
+                  this.setState({ randomLinkTitle: this.props.link[0].title })
                   this.setState({ randomLink: this.props.link[0].website })
-                  console.log(this.state.randomLink)
+                  console.log(this.props.link)
                 }}
               >
                 <div id="main">WOBBLE</div>
@@ -62,7 +63,7 @@ class Nav extends Component {
             <button className="comment-btn">Comments</button>
           </div>
         </nav>
-        <Route path="/add" render={() => <AddLink />} />
+        <Route path="/add" render={() => <AddLink link={this.props.link} />} />
         <Route
           path="/wobble"
           render={() => <MainPage link={this.state.randomLink} />}
