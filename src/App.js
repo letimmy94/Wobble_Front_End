@@ -5,6 +5,7 @@ import { Route, Link } from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
 import axios from 'axios'
 import './App.css'
+import SecretUpdateDelete from './SecretUpdateDelete/SecretUpdateDelete'
 
 class App extends Component {
   constructor() {
@@ -66,6 +67,7 @@ class App extends Component {
       <div className="App">
         <Nav link={this.state.links} handleWobble={this.handleWobble} />
         <HomePage />
+        <SecretUpdateDelete links={this.state.links} />
       </div>
     )
   }

@@ -3,6 +3,23 @@ import { Route } from 'react-router-dom'
 import axios from 'axios'
 
 class SecretUpdateDelete extends Component {
+  //   constructor() {
+  //     super()
+  //     this.state = {
+  //       links: ''
+  //     }
+  //   }
+
+  //   componentDidMount() {
+  //     axios
+  //       .get('http://localhost:3001/api/websites')
+  //       .then(website => {
+  //         this.setState({ links: website.data })
+  //       })
+  //       .then(
+
+  //       )
+  //   }
   removeWobble(e) {
     axios.delete('http://localhost:3001/api/websites/' + e.target.value)
     console.log(e.target.value)
