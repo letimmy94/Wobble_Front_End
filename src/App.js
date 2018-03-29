@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+
+import './App.css'
+import HomePage from './HomePage/HomePage.js'
 import Nav from './Nav/Nav'
 import axios from 'axios'
 import './App.css'
@@ -41,6 +44,8 @@ class App extends Component {
     return (
       <div className="App">
         <Nav link={this.state.links} handleWobble={this.handleWobble} />
+        {/* <HomePage /> */}
+        {/* <MainPage link={this.state.links} handleWobble={this.handleWobble} /> */}
       </div>
     )
   }
