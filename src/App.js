@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Nav from './Nav/Nav'
-import AddLink from './AddLink/AddLink'
-// import MainPage from './MainPage/MainPage'
 import axios from 'axios'
 import './App.css'
 
@@ -9,28 +7,7 @@ class App extends Component {
 	constructor() {
 		super()
 		this.state = {
-			links: [
-				{
-					title: 'PRAYFORME',
-					website: 'https://www.youtube.com/embed/K5xERXE7pxI',
-					rating: 0
-				},
-				{
-					title: 'ESCAPE',
-					website: 'https://www.youtube.com/embed/D6TawVna7PQ',
-					rating: 0
-				},
-				{
-					title: 'CIVILWARTHEME',
-					website: 'https://www.youtube.com/embed/Hi3YxHloH3Q',
-					rating: 0
-				},
-				{
-					title: 'DARKKNIGHTTHEME',
-					website: 'https://www.youtube.com/embed/QBHSYkDwNIc',
-					rating: 0
-				}
-			]
+			links: []
 		}
 		this.handleWobble = this.handleWobble.bind(this)
 	}
@@ -71,7 +48,6 @@ class App extends Component {
 		}
 		return randomized
 	}
-
 	render() {
 		// console.log(this.state.links)
 		return (

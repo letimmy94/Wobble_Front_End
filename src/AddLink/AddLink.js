@@ -6,9 +6,8 @@ class AddLink extends Component {
   constructor() {
     super()
     this.state = {
-      // newLink: []
-      title: 'hi',
-      website: 'aefe'
+      title: '',
+      website: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handlePost = this.handlePost.bind(this)
@@ -34,12 +33,18 @@ class AddLink extends Component {
       .then(data => {
         console.log(data)
       })
+      .then(window.location.assign('/home'))
+      .catch(err => console.log(err))
+    // .then(() => {
+    //   this.props.history.push('/wobble')
+    // })
     console.log(this.state.title)
   }
 
   render() {
     return (
       <div>
+        <h1 className="add-header">ADD A WOOBLE</h1>
         <form className="add-link-form">
           <input
             className="add-link-text-area"

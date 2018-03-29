@@ -1,3 +1,6 @@
+.wobble-page {
+  background: rgb(31, 31, 31);
+}
 .wobble-page:hover #main {
   transform-origin: 50% 50%;
   animation: 0.6s main 1;

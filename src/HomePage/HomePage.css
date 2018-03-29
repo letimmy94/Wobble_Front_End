@@ -1,0 +1,30 @@
+.homepage {
+  color: white;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  margin: auto;
+  max-width: 800px;
+  font-size: 30px;
+  padding: 12px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 120px;
+  font-family: 'Fascinate Inline', cursive;
+}

@@ -1,8 +1,8 @@
-h1 {
+.random-link-header {
   padding-top: 10px;
   margin: 0 auto;
   color: white;
-  letter-spacing: 15px;
+  letter-spacing: 5px;
   background: rgb(31, 31, 31);
 }
 nav {
@@ -47,12 +47,12 @@ nav {
 }
 .left-btn-img {
   z-index: 1;
-  margin-top: 5px;
+  margin-top: 8px;
   height: 25px;
 }
 .left-btn-img-down {
   z-index: 1;
-  margin-top: 8px;
+  margin-top: 5px;
   height: 25px;
 }
 #left-btn-container:hover .left-btn-text {
@@ -87,7 +87,7 @@ nav {
   font-size: 20px;
 }
 .comment-btn:hover {
-  background: blue;
+  background: grey;
 }
 
 .clipboard {
