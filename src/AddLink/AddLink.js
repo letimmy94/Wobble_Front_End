@@ -6,9 +6,8 @@ class AddLink extends Component {
   constructor() {
     super()
     this.state = {
-      // newLink: []
-      title: 'hi',
-      website: 'aefe'
+      title: '',
+      website: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handlePost = this.handlePost.bind(this)
@@ -40,6 +39,7 @@ class AddLink extends Component {
   render() {
     return (
       <div>
+        <h1>ADD A WOOBLE</h1>
         <form className="add-link-form">
           <input
             className="add-link-text-area"

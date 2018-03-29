@@ -66,7 +66,6 @@ class App extends Component {
     return (
       <div className="App">
         <Nav link={this.state.links} handleWobble={this.handleWobble} />
-        <SecretUpdateDelete links={this.state.links} />
       </div>
     )
   }

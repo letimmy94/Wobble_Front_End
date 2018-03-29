@@ -5,6 +5,7 @@ import Button from './Button/Button'
 import AddLink from '../AddLink/AddLink'
 import HomePage from '../HomePage/HomePage'
 import { Route, Link, Switch, Redirect } from 'react-router-dom'
+import SecretUpdateDelete from '../SecretUpdateDelete/SecretUpdateDelete'
 
 class Nav extends Component {
   constructor() {
@@ -61,6 +62,7 @@ class Nav extends Component {
                 <div id="main">WOBBLE</div>
               </button>
             </Link>
+            <Link to="/timmy" />
             <button className="comment-btn">Comments</button>
           </div>
         </nav>
@@ -74,6 +76,10 @@ class Nav extends Component {
           <Route
             path="/wobble"
             render={() => <MainPage link={this.state.randomLink} />}
+          />
+          <Route
+            path="/timmy"
+            render={() => <SecretUpdateDelete links={this.props.link} />}
           />
           <Route path="/" render={() => <Redirect to="/home" />} />
         </Switch>

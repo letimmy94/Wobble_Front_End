@@ -4,26 +4,10 @@ import axios from 'axios'
 import Edit from './Edit/Edit'
 
 class SecretUpdateDelete extends Component {
-  //   constructor() {
-  //     super()
-  //     this.state = {
-  //       links: ''
-  //     }
-  //   }
-
-  //   componentDidMount() {
-  //     axios
-  //       .get('http://localhost:3001/api/websites')
-  //       .then(website => {
-  //         this.setState({ links: website.data })
-  //       })
-  //       .then(
-
-  //       )
-  //   }
   removeWobble(e) {
     axios.delete('http://localhost:3001/api/websites/' + e.target.value)
     console.log(e.target.value)
+    window.location.reload()
   }
 
   render() {
@@ -47,7 +31,7 @@ class SecretUpdateDelete extends Component {
       )
     })
     return (
-      <div>
+      <div className="secret">
         <Route path="/edit" render={() => <Edit />} />
         <li>{links}</li>
       </div>
