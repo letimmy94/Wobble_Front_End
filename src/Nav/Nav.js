@@ -3,7 +3,8 @@ import './Nav.css'
 import MainPage from '../MainPage/MainPage'
 import Button from './Button/Button'
 import AddLink from '../AddLink/AddLink'
-import { Route, Link } from 'react-router-dom'
+import HomePage from '../HomePage/HomePage'
+import { Route, Link, Switch, Redirect } from 'react-router-dom'
 
 class Nav extends Component {
   constructor() {
@@ -63,11 +64,19 @@ class Nav extends Component {
             <button className="comment-btn">Comments</button>
           </div>
         </nav>
-        <Route path="/add" render={() => <AddLink link={this.props.link} />} />
-        <Route
-          path="/wobble"
-          render={() => <MainPage link={this.state.randomLink} />}
-        />
+        <Switch>
+          <Route path="/home" render={() => <HomePage />} />
+
+          <Route
+            path="/add"
+            render={() => <AddLink link={this.props.link} />}
+          />
+          <Route
+            path="/wobble"
+            render={() => <MainPage link={this.state.randomLink} />}
+          />
+          <Route path="/" render={() => <Redirect to="/home" />} />
+        </Switch>
       </div>
     )
   }
