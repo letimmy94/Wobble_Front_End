@@ -1,7 +1,7 @@
 .HomePage {
   color: white;
   text-align: center;
-  background: blue;
+  background-color: blue;
   height: 100%;
   display: flex;
   align-items: center;
