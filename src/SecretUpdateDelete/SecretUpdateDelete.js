@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import axios from 'axios'
+import Edit from './Edit/Edit'
 
 class SecretUpdateDelete extends Component {
   //   constructor() {
@@ -31,6 +32,14 @@ class SecretUpdateDelete extends Component {
       return (
         <ul key={i}>
           {link.title}{' '}
+          <Link to="/edit">
+            <button
+              value={link._id}
+              //  onClick={e => this.editWobble(e)}
+            >
+              Edit Wooble
+            </button>
+          </Link>
           <button value={link._id} onClick={e => this.removeWobble(e)}>
             UnWobbafy
           </button>
@@ -39,6 +48,7 @@ class SecretUpdateDelete extends Component {
     })
     return (
       <div>
+        <Route path="/edit" render={() => <Edit />} />
         <li>{links}</li>
       </div>
     )
