@@ -33,6 +33,10 @@ class AddLink extends Component {
       .then(data => {
         console.log(data)
       })
+      .catch(err => console.log(err))
+    // .then(() => {
+    //   this.props.history.push('/wobble')
+    // })
     console.log(this.state.title)
   }
 

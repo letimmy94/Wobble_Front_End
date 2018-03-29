@@ -11,18 +11,13 @@ class SecretUpdateDelete extends Component {
     window.location.reload()
   }
 
-  editWobble(e) {
-    e.preventDefault()
-    console.log('hi')
-  }
-
   render() {
     console.log(this.props.links)
     let links = this.props.links.map((link, i) => {
       return (
         <ul key={i}>
           {link.title}
-          <Link to={`/edit/${link._id}`}>
+          {/* <Link to={`/edit/${link._id}`}>
             <button
               value={link._id}
               className="secret-btn"
@@ -31,11 +26,12 @@ class SecretUpdateDelete extends Component {
             >
               Edit Wooble
             </button>
-          </Link>
-          <Route
+          </Link> */}
+          {/* <Route
             path={`/edit/${link._id}`}
-            render={link => <Edit title={link.title} link={link.website} />}
-          />
+            render={link =>  */}
+          <Edit title={link.title} link={link.website} id={link._id} />
+          {/* } /> */}
           <button
             className="secret-btn"
             value={link._id}
