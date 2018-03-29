@@ -4,6 +4,7 @@ import MainPage from '../MainPage/MainPage'
 import Button from './Button/Button'
 import AddLink from '../AddLink/AddLink'
 import HomePage from '../HomePage/HomePage'
+import Edit from '../SecretUpdateDelete/Edit/Edit'
 import { Route, Link, Switch, Redirect } from 'react-router-dom'
 import SecretUpdateDelete from '../SecretUpdateDelete/SecretUpdateDelete'
 
@@ -82,6 +83,10 @@ class Nav extends Component {
           <Route
             path="/timmy"
             render={() => <SecretUpdateDelete links={this.props.link} />}
+          />
+          <Route
+            path="/edit/:id"
+            render={() => <Edit link={this.props.link} />}
           />
           <Route path="/" render={() => <Redirect to="/home" />} />
         </Switch>

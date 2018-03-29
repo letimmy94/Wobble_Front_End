@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import Edit from './Edit/Edit'
+import './Secret.css'
 
 class SecretUpdateDelete extends Component {
   removeWobble(e) {
@@ -10,21 +11,36 @@ class SecretUpdateDelete extends Component {
     window.location.reload()
   }
 
+  editWobble(e) {
+    e.preventDefault()
+    console.log('hi')
+  }
+
   render() {
     console.log(this.props.links)
     let links = this.props.links.map((link, i) => {
       return (
         <ul key={i}>
-          {link.title}{' '}
-          <Link to="/edit">
+          {link.title}
+          <Link to={`/edit/${link._id}`}>
             <button
               value={link._id}
-              //  onClick={e => this.editWobble(e)}
+              className="secret-btn"
+              // editWobble={this.editWobble}
+              linkID={link._id}
             >
               Edit Wooble
             </button>
           </Link>
-          <button value={link._id} onClick={e => this.removeWobble(e)}>
+          <Route
+            path={`/edit/${link._id}`}
+            render={link => <Edit title={link.title} link={link.website} />}
+          />
+          <button
+            className="secret-btn"
+            value={link._id}
+            onClick={e => this.removeWobble(e)}
+          >
             UnWobbafy
           </button>
         </ul>
@@ -32,8 +48,7 @@ class SecretUpdateDelete extends Component {
     })
     return (
       <div className="secret">
-        <Route path="/edit" render={() => <Edit />} />
-        <li>{links}</li>
+        <li className="secret-li">{links}</li>
       </div>
     )
   }

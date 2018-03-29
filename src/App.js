@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import Nav from './Nav/Nav'
-import AddLink from './AddLink/AddLink'
-import { Route, Link } from 'react-router-dom'
-import HomePage from './HomePage/HomePage'
 import axios from 'axios'
 import './App.css'
-import SecretUpdateDelete from './SecretUpdateDelete/SecretUpdateDelete'
 
 class App extends Component {
   constructor() {
