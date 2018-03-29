@@ -7,12 +7,11 @@ import './Secret.css'
 class SecretUpdateDelete extends Component {
   removeWobble(e) {
     axios.delete('http://localhost:3001/api/websites/' + e.target.value)
-    console.log(e.target.value)
+    // console.log(e.target.value)
     window.location.reload()
   }
 
   render() {
-    console.log(this.props.links)
     let links = this.props.links.map((link, i) => {
       return (
         <ul key={i}>

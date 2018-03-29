@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 class Edit extends Component {
+  constructor() {
+    super()
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
   handleSubmit(e) {
     e.preventDefault()
     axios
@@ -14,11 +18,12 @@ class Edit extends Component {
     console.log(this.props.id)
     console.log(this.refs.title.value)
     console.log(this.refs.link.value)
+    window.location.reload()
   }
 
   render() {
-    let id = this.props.id
-    console.log(id)
+    // let id = this.props.id
+    // console.log(id)
     return (
       <div>
         <form>
