@@ -39,7 +39,7 @@ class AddLink extends Component {
   render() {
     return (
       <div>
-        <h1>ADD A WOOBLE</h1>
+        <h1 className="add-header">ADD A WOOBLE</h1>
         <form className="add-link-form">
           <input
             className="add-link-text-area"

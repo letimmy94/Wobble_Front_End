@@ -19,7 +19,9 @@ class Nav extends Component {
   render() {
     return (
       <div>
-        <h1 className="random-link-header">{this.state.randomLinkTitle}</h1>
+        <h1 className="random-link-header">
+          {this.state.randomLinkTitle.toUpperCase()}
+        </h1>
         <nav>
           <div>
             <Button
