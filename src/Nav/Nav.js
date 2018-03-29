@@ -3,7 +3,7 @@ import './Nav.css'
 import MainPage from '../MainPage/MainPage'
 import Button from './Button/Button'
 import AddLink from '../AddLink/AddLink'
-import { Router, Route, Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 
 class Nav extends Component {
   constructor() {
@@ -17,7 +17,7 @@ class Nav extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.randomLinkTitle}</h1>
+        <h1 className="random-link-header">{this.state.randomLinkTitle}</h1>
         <nav>
           <div>
             <Button

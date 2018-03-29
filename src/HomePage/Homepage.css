@@ -1,11 +1,10 @@
 .HomePage {
   color: white;
   text-align: center;
-  background-color: blue;
   background-repeat: no-repeat;
+  height: 100vh;
   background-size: cover;
   background-position: center;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,6 +15,9 @@
   margin: auto;
   max-width: 800px;
   font-size: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(33, 37, 33, 0.6);
 }
 
 .title {
@@ -42,7 +44,7 @@
   font-size: 10px;
 }
 
-.btn-large {
+/* .btn-large {
   font-size: 48px;
   padding: 15px 20px;
 }
@@ -53,4 +55,8 @@
   width: 100%;
   max-width: 250px;
   margin: 0 auto;
+} */
+body {
+  margin: 0;
+  /* height: 100vh; */
 }
