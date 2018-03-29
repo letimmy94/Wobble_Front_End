@@ -1,30 +1,4 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
-import './HomePage.css'
-import '../App.css'
-
-class HomePage extends Component {
-	render() {
-		return (
-			<div className="HomePage">
-				<div className="content">
-					<h1 className="title">WOBBLE!</h1>
-					<p>
-						Wobble is helps you exploring new exciting pages through random
-						generating websites.
-					</p>
-					<div className="btnWrapper">
-						<button className="btn btn-large">Start</button>
-						<p>or</p>
-						<button type="submit" className="btn btn-small">
-							Submit#
-						</button>
-					</div>
-				</div>
-			</div>
-		)
-	}
-=======
 import './Homepage.css'
 import '../index.css'
 import '../App.css'
@@ -55,6 +29,5 @@ class HomePage extends Component {
       </div>
     )
   }
->>>>>>> 7931bff90f5e2bca74c613cad1bf8a71a19a1e54
 }
 export default HomePage
