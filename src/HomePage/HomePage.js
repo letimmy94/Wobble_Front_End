@@ -6,7 +6,7 @@ class HomePage extends Component {
     const image =
       'https://i.imgur.com/5NZRISg_d.jpg?maxwidth=1040&fidelity=high'
     return (
-      <div className="HomePage" style={{ backgroundImage: `url('${image}')` }}>
+      <div className="homepage" style={{ backgroundImage: `url('${image}')` }}>
         <div className="content">
           <h1 className="title">WOBBLE!</h1>
           <p>
