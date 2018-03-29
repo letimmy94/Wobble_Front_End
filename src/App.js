@@ -6,7 +6,6 @@ import Nav from './Nav/Nav'
 import AddLink from './AddLink/AddLink'
 import MainPage from './MainPage/MainPage'
 import { Route } from 'react-router-dom'
-import HomePage from './HomePage/HomePage'
 
 import axios from 'axios'
 import './App.css'
