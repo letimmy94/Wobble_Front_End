@@ -28,7 +28,7 @@ class Nav extends Component {
             <Button
               btnClass={'red left-btns'}
               imgClass={'left-btn-img'}
-              icon={require('../Nav/thumbsup.png')}
+              icon={require('../Nav/thumbsdown.png')}
               alt={'LIKE'}
             />
             <Button
@@ -40,7 +40,7 @@ class Nav extends Component {
             <Button
               btnClass={'green left-btns'}
               imgClass={'left-btn-img-down'}
-              icon={require('../Nav/thumbsdown.png')}
+              icon={require('../Nav/thumbsup.png')}
               alt={'DISLIKE'}
             />
           </div>

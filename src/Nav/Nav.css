@@ -47,12 +47,12 @@ nav {
 }
 .left-btn-img {
   z-index: 1;
-  margin-top: 5px;
+  margin-top: 8px;
   height: 25px;
 }
 .left-btn-img-down {
   z-index: 1;
-  margin-top: 8px;
+  margin-top: 5px;
   height: 25px;
 }
 #left-btn-container:hover .left-btn-text {
