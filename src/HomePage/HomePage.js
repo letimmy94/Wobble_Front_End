@@ -17,14 +17,12 @@ class HomePage extends Component {
             is a random website generator to bring you the best (and most
             random) parts of the web at a click of a button. Get started here.
           </p>
-          <div className="btnWrapper">
-            <Link to="/nav">
-              <button className="btn btn-large">Start</button>
-            </Link>
+          {/* <div className="btnWrapper">
+            <button className="btn btn-large">Start</button>
             <button type="submit" className="btn btn-small">
               Submit#
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     )
