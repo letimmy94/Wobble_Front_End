@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import Nav from './Nav/Nav'
 import AddLink from './AddLink/AddLink'
-// import MainPage from './MainPage/MainPage'
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import HomePage from './HomePage/HomePage'
-
 import axios from 'axios'
 import './App.css'
 
@@ -41,10 +39,10 @@ class App extends Component {
   componentDidMount() {
     axios.get('http://localhost:3001/api/websites').then(website => {
       // this.handleWobble(website.data)
-      console.log(website.data[0].website)
-      for (var i = 0; i < website.data.length; i++) {
-        this.setState({ links: [...this.state.links, website.data[i]] })
-      }
+      console.log(website.data)
+      // for (var i = 0; i < website.data.length; i++) {
+      this.setState({ links: website.data })
+      // }
     })
   }
 
@@ -64,12 +62,10 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.state.links)
     return (
       <div className="App">
         <Nav link={this.state.links} handleWobble={this.handleWobble} />
         <HomePage />
-        {/* <MainPage link={this.state.links} handleWobble={this.handleWobble} /> */}
       </div>
     )
   }
