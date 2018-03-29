@@ -45,6 +45,7 @@ class Nav extends Component {
 		return (
 			<div>
 				<h1>{this.state.randomLinkTitle}</h1>
+				<h2>rating {this.state.randomLinkRating}</h2>
 				<nav>
 					<div>
 						<Button

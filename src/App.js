@@ -76,7 +76,11 @@ class App extends Component {
 		// console.log(this.state.links)
 		return (
 			<div className="App">
-				<Nav link={this.state.links} handleWobble={this.handleWobble} />
+				<Nav
+					link={this.state.links}
+					handleWobble={this.handleWobble}
+					updateRating={this.updateRating}
+				/>
 				{/* <MainPage link={this.state.links} handleWobble={this.handleWobble} /> */}
 			</div>
 		)
