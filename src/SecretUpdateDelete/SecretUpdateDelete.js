@@ -17,21 +17,7 @@ class SecretUpdateDelete extends Component {
       return (
         <ul key={i}>
           {link.title}
-          {/* <Link to={`/edit/${link._id}`}>
-            <button
-              value={link._id}
-              className="secret-btn"
-              // editWobble={this.editWobble}
-              linkID={link._id}
-            >
-              Edit Wooble
-            </button>
-          </Link> */}
-          {/* <Route
-            path={`/edit/${link._id}`}
-            render={link =>  */}
           <Edit title={link.title} link={link.website} id={link._id} />
-          {/* } /> */}
           <button
             className="secret-btn"
             value={link._id}
