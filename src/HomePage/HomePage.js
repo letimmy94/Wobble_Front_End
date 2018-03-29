@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Homepage.css'
+import '../index.css'
 import '../App.css'
 import { Router, Route, Link } from 'react-router-dom'
 
@@ -17,7 +18,9 @@ class HomePage extends Component {
             random) parts of the web at a click of a button. Get started here.
           </p>
           <div className="btnWrapper">
-            <button className="btn btn-large">Start</button>
+            <Link to="/nav">
+              <button className="btn btn-large">Start</button>
+            </Link>
             <button type="submit" className="btn btn-small">
               Submit#
             </button>
