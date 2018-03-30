@@ -11,6 +11,13 @@ nav {
   justify-content: space-between;
   background: rgb(31, 31, 31);
 }
+.rating {
+  color: white;
+  font-family: arial;
+  font-size: 20px;
+  margin-top: 35px;
+
+}
 
 /* red grey green buttons */
 .left-btns {
@@ -57,6 +64,7 @@ nav {
 }
 #left-btn-container:hover .left-btn-text {
   display: block;
+  /* background: radial-gradient(green, pink,red ); */
 }
 
 /* Link area */
@@ -67,6 +75,8 @@ nav {
   border-radius: 10px;
   background: white;
   outline: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .link {
   font-size: 20px;
@@ -90,6 +100,13 @@ nav {
   background: grey;
 }
 
+.add-link-btn {
+  margin-right: 0;
+  height: 47px;
+  width: 40px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
 .clipboard {
   height: 25px;
   padding: 5px;

@@ -16,13 +16,13 @@ class CommentsView extends Component {
     console.log(comments)
     return (
       <div>
-        <h1>Comments</h1>
-        <CommentAdd />
+        <h1 className="add-header">Comments</h1>
         <ul className="comments-ul">
           <li className="comments-li">
             {comment}
           </li>
         </ul>
+        <CommentAdd />
       </div>
     )
   }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-class SideMenu extends Component {
+class Ratings extends Component {
   render() {
     return <div />
   }
 }
 
-export default SideMenu
+export default Ratings

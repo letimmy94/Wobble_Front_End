@@ -14,15 +14,34 @@ class Nav extends Component {
     super()
     this.state = {
       randomLinkTitle: '',
-      randomLink: ''
+      randomLink: '',
+      randomLinkRating: 0
     }
   }
+  like = () => {
+    this.setState(({ randomLinkRating }) => ({
+      randomLinkRating: randomLinkRating + 1
+    }))
+    this.props.updateRating(
+      this.state.randomLinkTitle,
+      this.state.randomLinkRating
+    )
+  }
 
+  dislike = () => {
+    this.setState(({ randomLinkRating }) => ({
+      randomLinkRating: randomLinkRating - 1
+    }))
+    this.props.updateRating(
+      this.state.randomLinkTitle,
+      this.state.randomLinkRating
+    )
+  }
   render() {
     return (
       <div>
         <h1 className="random-link-header">
-          {this.state.randomLinkTitle.toUpperCase()}
+          = {this.state.randomLinkTitle.toUpperCase()} = <span className="rating"> Rating: {this.state.randomLinkRating} </span>
         </h1>
         <nav>
           <div>
@@ -30,7 +49,8 @@ class Nav extends Component {
               btnClass={'red left-btns'}
               imgClass={'left-btn-img'}
               icon={require('../Nav/thumbsdown.png')}
-              alt={'LIKE'}
+              updateRating={this.dislike}
+              alt={'DISLIKE'}
             />
             <Button
               btnClass={'grey left-btns'}
@@ -42,16 +62,19 @@ class Nav extends Component {
               btnClass={'green left-btns'}
               imgClass={'left-btn-img-down'}
               icon={require('../Nav/thumbsup.png')}
-              alt={'DISLIKE'}
+              updateRating={this.like}
+              alt={'LIKE'}
             />
+
           </div>
 
           <div>
             <Link to="/add">
-              <button className="comment-btn">+</button>
+              <button className="comment-btn add-link-btn">+</button>
             </Link>
             <input className="link link-div" value={this.state.randomLink} />
           </div>
+
           <div>
             <Link to="/wobble">
               <button
@@ -60,6 +83,7 @@ class Nav extends Component {
                   this.props.handleWobble(this.props.link)
                   this.setState({ randomLinkTitle: this.props.link[0].title })
                   this.setState({ randomLink: this.props.link[0].website })
+                  this.setState({ randomLinkRating: this.props.link[0].rating })
                   console.log(this.props.link)
                   console.log(this.props.link[0].comments[0])
                 }}

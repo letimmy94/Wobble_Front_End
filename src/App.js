@@ -14,12 +14,25 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:3001/api/websites')
+      .get('http://wobble-back-end.herokuapp.com/api/websites')
       .then(website => {
         console.log(website.data)
         this.setState({ links: website.data })
       })
       .catch(err => console.log(err))
+  }
+
+  updateRating = (title, rating) => {
+    this.setState(({ links }) => ({
+      links: links.map(link => {
+        if (link.title === title) {
+          link.rating = rating
+          return link
+        } else {
+          return link
+        }
+      })
+    }))
   }
 
   // Used the https://www.w3resource.com/javascript-exercises/javascript-array-exercise-17.php as a guide
@@ -41,7 +54,7 @@ class App extends Component {
     console.log(this.state.links)
     return (
       <div className="App">
-        <Nav link={this.state.links} handleWobble={this.handleWobble} />
+        <Nav link={this.state.links} handleWobble={this.handleWobble} updateRating={this.updateRating} />
       </div>
     )
   }
