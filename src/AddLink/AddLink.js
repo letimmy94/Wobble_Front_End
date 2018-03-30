@@ -35,9 +35,6 @@ class AddLink extends Component {
       })
       .then(window.location.assign('/home'))
       .catch(err => console.log(err))
-    // .then(() => {
-    //   this.props.history.push('/wobble')
-    // })
     console.log(this.state.title)
   }
 

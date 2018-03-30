@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import './CommentAdd.css'
+import './Commentadd.css'
 
 //NHI -- I copied and pasted from your add link component and fiddled around... but I don't totally know what to do so I'm handing things off.
 class CommentAdd extends Component {
   constructor() {
     super()
     this.state = {
-      // newLink: []
       comment: '',
       name: ''
     }

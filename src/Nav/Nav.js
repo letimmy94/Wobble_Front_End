@@ -5,6 +5,7 @@ import HomePage from '../HomePage/HomePage'
 import Button from './Button/Button'
 import AddLink from '../AddLink/AddLink'
 import Edit from '../SecretUpdateDelete/Edit/Edit'
+import CommentsView from '../CommentsView/Commentsview'
 import { Route, Link, Switch, Redirect } from 'react-router-dom'
 import SecretUpdateDelete from '../SecretUpdateDelete/SecretUpdateDelete'
 
@@ -66,7 +67,7 @@ class Nav extends Component {
               </button>
             </Link>
             <Link to="/timmy" />
-            <button className="comment-btn">Comments</button>
+            <Link to='/comments'><button className="comment-btn">Comments</button></Link>
           </div>
         </nav>
         <Switch>
@@ -88,6 +89,7 @@ class Nav extends Component {
             path="/edit/:id"
             render={() => <Edit link={this.props.link} />}
           />
+          <Route path='/comments' render={() => <CommentsView comments={this.props.link} />} />
           <Route path="/" render={() => <Redirect to="/home" />} />
         </Switch>
       </div>
