@@ -61,6 +61,7 @@ class Nav extends Component {
                   this.setState({ randomLinkTitle: this.props.link[0].title })
                   this.setState({ randomLink: this.props.link[0].website })
                   console.log(this.props.link)
+                  console.log(this.props.link[0].comments[0])
                 }}
               >
                 <div id="main">WOBBLE</div>
@@ -89,7 +90,7 @@ class Nav extends Component {
             path="/edit/:id"
             render={() => <Edit link={this.props.link} />}
           />
-          <Route path='/comments' render={() => <CommentsView comments={this.props.link} />} />
+          <Route path='/comments' render={() => <CommentsView websiteObject={this.props.link} />} />
           <Route path="/" render={() => <Redirect to="/home" />} />
         </Switch>
       </div>

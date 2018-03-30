@@ -2,22 +2,27 @@ import React, { Component } from 'react'
 import './CommentsView.css'
 import CommentAdd from '../CommentAdd/CommentAdd'
 
-//think i'm doing this right...
 class CommentsView extends Component {
   render() {
-    console.log(this.props.comments[0])
+    console.log(this.props.websiteObject[0].comments)
+    console.log(this.props.websiteObject[0].comments[0].comment)
+    let comments = this.props.websiteObject[0].comments
+    let comment = comments.map((comment, i) => {
+      return (
+        <p key={i}>{comment.name}<br />{comment.comment}<br />{comment.date} {console.log(comment.comment)}</p>
+
+      )
+    })
+    console.log(comments)
     return (
       <div>
         <h1>Comments</h1>
-        {/* <ol>
-          <li> */}
-        {/* <p>{this.props.comments}</p>
-            <p>
-              {this.props.comments.name} | {this.props.comments.date}
-            </p>
-          </li>
-        </ol> */}
         <CommentAdd />
+        <ul className="comments-ul">
+          <li className="comments-li">
+            {comment}
+          </li>
+        </ul>
       </div>
     )
   }

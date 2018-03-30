@@ -18,7 +18,6 @@ class CommentAdd extends Component {
     e.preventDefault()
     this.setState(
       {
-        // i don't know if this is what I am supposed to be calling here...
         comment: this.refs.comment.value,
         name: this.refs.name.value
       },
@@ -28,17 +27,13 @@ class CommentAdd extends Component {
 
   handlePost() {
     axios
-      //changed the .post link because it's the api/comments.... but is it comments of individual post? do we need an ID involved here?
-      // on the back end I believe it's api/comments/:id ??? but i'm not sure how to call that here.
       .post('http://localhost:3001/api/comments', {
-        //do these need to be this.state.comments.comment and this.state.comments.name????
         comment: this.state.comment,
         name: this.state.name
       })
       .then(data => {
         console.log(data)
       })
-    // console.log(this.state.comment)
   }
 
   render() {

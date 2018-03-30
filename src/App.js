@@ -38,6 +38,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.links)
     return (
       <div className="App">
         <Nav link={this.state.links} handleWobble={this.handleWobble} />
