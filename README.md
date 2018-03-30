@@ -1,6 +1,6 @@
 # Wobbler - Front End
 
-Wobble is a random website generator to bring you the best (and most random) parts of the web at a click of a button. This project is an attempt at a [Stumble Upon](www.stumbleupon.com) clone. This repo is for front end with full connection to our backend full CRUD functionality on our main set of data. The front end can be found [here](https://github.com/dbf8/Wobble-Back-End). Users can click to randomly show a website. Users can add in links to their favorite websites and have to display on the page for other users. Users can comment about the sites.
+Wobble is a random website generator to bring you the best (and most random) parts of the web at a click of a button. This project is an attempt at a [Stumble Upon](www.stumbleupon.com) clone. This repo is for front end with full connection to our backend full CRUD functionality on our main set of data. The front end can be found [here](https://github.com/dbf8/Wobble_Back_End). Users can click to randomly show a website. Users can add in links to their favorite websites and have to display on the page for other users. Users can comment about the sites.
 
 We will have a secret link that only us (admins) can access in order to update or delete things.
 
