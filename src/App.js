@@ -14,7 +14,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get('https://wobble-back-end.herokuapp.com/api/websites')
+      .get('http://wobble-back-end.herokuapp.com/api/websites')
       .then(website => {
         console.log(website.data)
         this.setState({ links: website.data })
