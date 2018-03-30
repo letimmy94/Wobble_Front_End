@@ -31,7 +31,7 @@ class CommentAdd extends Component {
     axios
       //changed the .post link because it's the api/comments.... but is it comments of individual post? do we need an ID involved here?
       // on the back end I believe it's api/comments/:id ??? but i'm not sure how to call that here.
-      .post('http://wobble-back-end.herokuapp.com/api/comments', {
+      .post('https://wobble-back-end.herokuapp.com/api/comments', {
         //do these need to be this.state.comments.comment and this.state.comments.name????
         comment: this.state.comment,
         name: this.state.name

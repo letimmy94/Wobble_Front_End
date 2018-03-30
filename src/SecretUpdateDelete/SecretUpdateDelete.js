@@ -5,7 +5,7 @@ import './Secret.css'
 
 class SecretUpdateDelete extends Component {
   removeWobble(e) {
-    axios.delete('http://wobble-back-end.herokuapp.com/api/websites/' + e.target.value)
+    axios.delete('https://wobble-back-end.herokuapp.com/api/websites/' + e.target.value)
     // console.log(e.target.value)
     window.location.reload()
   }

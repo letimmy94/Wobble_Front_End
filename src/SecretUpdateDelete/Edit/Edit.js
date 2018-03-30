@@ -9,7 +9,7 @@ class Edit extends Component {
   handleSubmit(e) {
     e.preventDefault()
     axios
-      .put(`http://wobble-back-end.herokuapp.com/api/websites/${this.props.id}`, {
+      .put(`https://wobble-back-end.herokuapp.com/api/websites/${this.props.id}`, {
         title: this.refs.title.value,
         website: this.refs.link.value
       })
