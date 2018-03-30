@@ -26,7 +26,8 @@ class CommentAdd extends Component {
     )
   }
 
-  handlePost() {
+  handlePost(e) {
+    e.preventDefault()
     axios
       //changed the .post link because it's the api/comments.... but is it comments of individual post? do we need an ID involved here?
       // on the back end I believe it's api/comments/:id ??? but i'm not sure how to call that here.
