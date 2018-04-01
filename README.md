@@ -27,7 +27,6 @@ _2. Comment_: Username, Text, Date
 * Express
 * Node
 * MongoDB
-* Love
 
 ## Authors
 
