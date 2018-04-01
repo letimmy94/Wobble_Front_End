@@ -1,0 +1,140 @@
+.random-link-header {
+  padding-top: 10px;
+  margin: 0 auto;
+  color: white;
+  letter-spacing: 5px;
+  background: rgb(31, 31, 31);
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgb(31, 31, 31);
+}
+.rating {
+  color: white;
+  font-family: arial;
+  font-size: 20px;
+  margin-top: 35px;
+
+}
+
+/* red grey green buttons */
+.left-btns {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin: 30px 15px;
+  outline: none;
+}
+.red {
+  background: #ff4838;
+  margin-left: 30px;
+}
+.grey {
+  background: lightgrey;
+}
+.green {
+  background: #4acd39;
+}
+
+#left-btn-container {
+  position: relative;
+}
+.left-btn-text {
+  position: absolute;
+  display: none;
+  top: 0;
+  color: white;
+}
+.left-btn-hamburger {
+  height: 40px;
+  margin-left: -8px;
+  margin-top: -1px;
+}
+.left-btn-img {
+  z-index: 1;
+  margin-top: 8px;
+  height: 25px;
+}
+.left-btn-img-down {
+  z-index: 1;
+  margin-top: 5px;
+  height: 25px;
+}
+#left-btn-container:hover .left-btn-text {
+  display: block;
+  /* background: radial-gradient(green, pink,red ); */
+}
+
+/* Link area */
+.link-div {
+  margin-top: 25px;
+  width: 600px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.link {
+  font-size: 20px;
+  height: 30px;
+  padding: 8px 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* comment button */
+.comment-btn,
+.wobble-btn {
+  height: 35px;
+  margin-top: 30px;
+  margin-right: 30px;
+  outline: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.comment-btn:hover {
+  background: grey;
+}
+
+.add-link-btn {
+  margin-right: 0;
+  height: 47px;
+  width: 40px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.clipboard {
+  height: 25px;
+  padding: 5px;
+}
+.clipboard-btn {
+  height: 35px;
+}
+
+/* wobble effect button*/
+.wobble-btn:hover #main {
+  transform-origin: 50% 50%;
+  animation: 0.6s main 2;
+}
+
+@keyframes main {
+  0% {
+    transform: rotate(30deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+  75% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
